@@ -1,4 +1,4 @@
-# Hi, I'm Dorothy! 👋
+# Hi, I'm Dorothy! 
 
 Welcome to the home of my personal website.
 
@@ -17,7 +17,7 @@ I'm a virtual assistant from the Philippines and your behind the scenes partner.
 
 ## How I built it
 
-I made this website myself with plain HTML, CSS and JavaScript. It's all in a single file, `index.html`, with no frameworks and no build tools. It's hosted on Netlify and GitHub Pages.
+This website was made with plain HTML, CSS and JavaScript. It's all in a single file, `index.html`, with no frameworks and no build tools. It's hosted on Netlify and GitHub Pages.
 
 ## Let's get to know each other
 
