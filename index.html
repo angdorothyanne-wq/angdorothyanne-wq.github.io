@@ -1214,7 +1214,7 @@ svg.on("click",()=>{selected=null;hl(null);info(null)});
 function labels(){T.style("display",d=>{if(!vis(d))return"none";const f=selected;if(f&&(d===f||adj.get(f.id).has(d.id)))return(curK>1.2||d===f||d.hub)?null:"none";return(d.hub&&curK>.5)||curK>2?null:"none";});}
 function hl(f){if(!f){N.attr("opacity",n=>vis(n)?1:.06);L.attr("stroke-opacity",l=>vis(l.source)&&vis(l.target)?.08:.01).attr("stroke","#C9D1E6");labels();return;}const nb=adj.get(f.id);N.attr("opacity",n=>!vis(n)?.06:(n===f||nb.has(n.id)?1:.14));L.attr("stroke-opacity",l=>(l.source===f||l.target===f)?.7:.03).attr("stroke",l=>(l.source===f||l.target===f)?colorOf(f.area):"#C9D1E6");labels();}
 const I=document.getElementById("lm-info"),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function info(d){I.innerHTML=d?"<strong>"+esc(d.id)+"</strong> · "+d.area+" · connects to "+adj.get(d.id).size+" notes · <em>notes coming soon</em>":"Drag it, zoom in, and click any dot to see what I'm learning.";}
+function info(d){I.innerHTML=d?"<strong>"+esc(d.id)+"</strong> · "+d.area+" · connects to "+adj.get(d.id).size+" notes":"Drag it, zoom in, and click any dot to see what I'm learning.";}
 hl(null);fit();
 new ResizeObserver(()=>fit()).observe(box);
 }
